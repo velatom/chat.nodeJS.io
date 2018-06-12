@@ -5,13 +5,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<title>Chat con Node y Socket</title>
+
+		<link rel="stylesheet" type="text/css" href="/css/estilo.css">
+
 		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
 		<script type="text/javascript" src="main.js"></script>
+
 	</head>
 	<body>
 		<h1>Chat con Node y Socket</h1>
-		<div id="mensajes">
-			
-		</div>
+		<div id="mensajes"></div>
+		<form onsubmit="return addMensaje(this);">
+			<input type="text" name="nick" id="nickname" placeholder="Nick" />
+			<textarea id="texto" placeholder="Mensaje..."></textarea>
+			<input type="submit" value="Enviar" />
+		</form>
 	</body>
 </html>
